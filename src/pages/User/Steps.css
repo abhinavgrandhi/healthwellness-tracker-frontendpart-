@@ -1,0 +1,117 @@
+/* Custom CSS for Steps Component */
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    padding: 20px;
+  }
+  
+  .steps-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .steps-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .steps-display {
+    margin-bottom: 25px;
+  }
+  
+  .steps-label {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+  }
+  
+  .steps-count {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #3498db;
+    margin: 0;
+  }
+  
+  .steps-goal {
+    font-size: 1rem;
+    color: #95a5a6;
+    margin-top: 5px;
+  }
+  
+  .progress-bar-container {
+    background: #ecf0f1;
+    border-radius: 10px;
+    height: 15px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  
+  .progress-bar {
+    background: linear-gradient(90deg, #3498db, #2980b9);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+  }
+  
+  .goal-setting {
+    margin-bottom: 25px;
+  }
+  
+  .goal-label {
+    display: block;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .goal-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .goal-input:focus {
+    border-color: #3498db;
+  }
+  
+  .weekly-trends {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .trends-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .trends-placeholder {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 0;
+  }
+  /* Existing styles... */
+
+.view-buttons button {
+    /* Additional spacing or styling if needed */
+    transition: background-color 0.3s ease;
+  }
+  

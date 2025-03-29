@@ -1,0 +1,327 @@
+/* Nutrition.css */
+:root {
+    --primary-color: #3498db; /* Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --background-gradient: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    --card-background: white;
+    --text-color: #2c3e50;
+    --text-light: #7f8c8d;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 15px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* General Styles */
+  .nutrition-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--background-gradient);
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nutrition-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 25px;
+    max-width: 800px;
+    width: 100%;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .nutrition-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .nutrition-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Calorie Goal Input */
+  .calorie-goal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .goal-label {
+    font-size: 1.1rem;
+    color: var(--text-color);
+  }
+  
+  .goal-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .goal-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  /* Meal Input Form */
+  .meal-input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .meal-input-field {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .meal-input-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
+  
+  .calorie-field {
+    max-width: 120px;
+  }
+  
+  .add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .add-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Progress Bar */
+  .progress-section {
+    margin-bottom: 20px;
+  }
+  
+  .progress-text {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar-container {
+    background: #ecf0f1;
+    border-radius: 8px;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progress-bar {
+    background: var(--secondary-color);
+    height: 100%;
+    transition: width 0.5s ease;
+    position: relative;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
+    animation: shimmer 1.5s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Meal List */
+  .meal-history {
+    margin-bottom: 20px;
+  }
+  
+  .history-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .history-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    margin-top: 5px;
+  }
+  
+  .meal-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .meal-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+  
+  .meal-item:hover {
+    background: #f9f9f9;
+    transform: translateX(5px);
+  }
+  
+  .meal-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .meal-actions button {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    transition: var(--transition);
+  }
+  
+  .meal-actions button:hover {
+    transform: translateY(-2px);
+  }
+  
+  .no-meals {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  /* View Toggle */
+  .view-toggle {
+    margin-bottom: 20px;
+  }
+  
+  .view-toggle button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: var(--transition);
+  }
+  
+  .view-toggle button:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Trends Section */
+  .trends-section {
+    margin-bottom: 20px;
+  }
+  
+  .trends-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .trends-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    margin-top: 5px;
+  }
+  
+  .trends-placeholder {
+    font-size: 1rem;
+    color: var(--text-light);
+    text-align: center;
+  }
+  
+  /* Diet Plan Section */
+  .diet-plan-section {
+    margin-bottom: 20px;
+  }
+  
+  .diet-plan-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .diet-plan-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: var(--primary-color);
+    margin-top: 5px;
+  }
+  
+  .diet-plan-description {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+  }
+  
+  .diet-plan-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 100px;
+    transition: var(--transition);
+  }
+  
+  .diet-plan-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+  }
