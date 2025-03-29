@@ -57,7 +57,7 @@ const Home = () => {
           <blockquote className="testimonial-text">
             "Health Tracker has completely changed how I approach my fitness goals. It's simple, effective, and motivating!"
           </blockquote>
-          <p className="testimonial-author">— Jane Doe</p>
+          <p className="testimonial-author">— G.Abhinav</p>
         </div>
       </section>
 
